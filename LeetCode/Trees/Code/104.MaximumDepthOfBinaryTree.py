@@ -1,15 +1,5 @@
 from typing import Optional
 
-# This problem's aim is to find the depth of the tree, or in other words the height of the tree
-# it is essential to know this pattern because it is widely used in other problems too.
-
-# Approach --> we set a function dfs which gets TreeNode and counter(current height of the element) as arguments
-# We then iterate through the nodes to get the maximum height comparing it with global variable res
-
-#Complexities:
-# Time --> O(n) --> it is visiting each node
-# Space --> O(1) --> no extra space is being allocated
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
