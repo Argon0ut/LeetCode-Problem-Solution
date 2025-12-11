@@ -1,0 +1,13 @@
+Related: 104. Maximum Depth of Binary Tree
+Easy
+
+Intuition: Iterate through the tree using DFS and when the node has no child elements, compare its height to the res.
+
+Approach: dfs with counter. Since reference semantics pass only the Objects directly, the primitive elements are not copied.
+so the upper level loop works fine with its current counter
+
+Complexity:
+Time: O(n)
+Space: O(h) -> h is the height of the tree
+
+

@@ -1,0 +1,24 @@
+543. Diameter of Binary Tree
+[Easy]
+Tree, Binary Tree, DFS
+Pattern: DFS with height computations with simultaneous comparisons
+Related: 110. Balanced Binary Tree
+
+# Intuition:
+The Diameter is the longest path between any two nodes in the tree.
+The path may or may not pass through the root.
+
+We have to perform operations based on the heights of the subtrees
+
+# Approach:
+Compute the height of the left subtree
+Compute the height of the right subtree
+Compare their sub with the maxDiameter
+Return the longest between left and right subtrees + 1 (edge to their parent)
+
+# Time Complexity:
+O(N)
+# Space Complexity:
+O(H):
+    O(N) --> Worst Case (Skewed Tree)
+    O(logN) --> Best Case (Balanced Tree)

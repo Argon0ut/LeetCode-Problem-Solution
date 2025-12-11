@@ -1,0 +1,27 @@
+572. Subtree of Another Tree
+[Easy]
+Tree, Binary Tree, DFS
+Pattern: DFS with Subtrees' Height comparisons
+Related:
+
+# AIM:
+To check if the one tree contains the other tree
+
+# Intuition:
+We simply have to check if the sub tree is in the root tree
+Each tree can be represented as an array
+We first write the values of subtree into one array and the root string into another array and at the end compare them
+
+
+# Approach:
+Initialize the global return value res = False
+Recursive DFS function receives the node and array object as arguments and write down the values
+We are using arrays over strings, because strings in python are immutable, and if we pass them as argument and operate on them,
+they will only create the copies of those strings inside the function.
+
+We also cannot simply say arr1 in arr2
+Thus we first convert the array into strings and then compare them
+
+# Complexity:
+Time --> O(n)
+Space --> O(n)

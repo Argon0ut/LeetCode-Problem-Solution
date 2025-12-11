@@ -1,0 +1,7 @@
+Intuition: Inorder traversal preserves the following order: Left-Parent-Right
+
+Approach: use dfs and simple visit left subtree first
+
+Complexities:
+Time: O(n)
+Space: O(n)
