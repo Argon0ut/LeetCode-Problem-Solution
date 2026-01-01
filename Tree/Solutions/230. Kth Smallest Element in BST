@@ -1,0 +1,19 @@
+230. Kth Smallest Element in BST
+Medium
+Pattern: In-Order traversal to create an array of sorted BST elements
+Related: {
+    94. Binary Tree Inorder Traversal
+    98. Validate Binary Tree
+}
+
+Intuition:
+Since BST's representation is a sorted array, we simply traverse through the tree using inorder traversal.
+Then return the k-1th element of the array
+
+Approach:
+1) use DFS(L-P-R) to fill the array
+2) return k-1 st element
+
+Complexity:
+Time -> O(n) -> run through the tree once
+Space -> O(n) -> allocate space for n values in array

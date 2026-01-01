@@ -1,0 +1,16 @@
+226. Invert Binary Tree
+[Easy]
+Tree, Binary Tree, DFS
+Pattern: DFS with child swapping
+
+#Intuition:
+We simply have to start from the top and swap the left and right subtrees
+
+#Approach:
+Use recursive DFS and swap the left and right subtrees. The traversal stops when the we hit the leaf node(no children).
+The swap can be accomplished either like a, b = b, a or by using a temp variable. In second case it is more space efficient.
+
+#Complexity:
+Time O(N)
+Space O(H) = O(N) in worst case, O(logN) (best case) if the tree is balanced
+where H is the size of the call stack of the recursion.

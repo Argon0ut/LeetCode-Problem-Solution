@@ -1,0 +1,35 @@
+235. Lowest Common Ancestor of a Binary Search Tree
+[Medium]
+Tree, Binary Search Tree, DFS
+Pattern: DFS, Pre-Order-Traversal
+Related:
+
+# Definition:
+Lowest Common Ancestor(LCA) :
+“The lowest common ancestor is defined between two nodes p and q as the lowest node in Tree
+that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+
+# Intuition:
+We simply have to track the elements that come to be the children of certain parent.
+We can use a hashtable to store the sets of elements that are children of a certain parent.
+
+# Approach:
+We need an array that will store the ancestors and the hashTable with treeNode : set() pairs.
+1) track the parent
+2) track the left child and append join the corresponding set with the parent's set
+3) same procedure for the right child
+4) track the elem if it contains both required Nodes.
+
+return the first element in the res array
+
+# Complexities:
+Time:
+Worst Case --> O(n^2) --> Skewed Tree --> Copying the sets of the same length
+Avg Case --> O(N*logN) --> Balanced Tree
+
+Space --> O(n^2)
+First root stores n values
+next stores n - 1
+next stores n - 2 and so on.
+the total size of sets is: n + n - 1 + n + 2 + ... + 1 = O(n^2)
+

@@ -1,0 +1,17 @@
+104. Maximum Depth of Binary Tree
+[Easy]
+Tree, Binary Tree, DFS
+Pattern: DFS with height counting
+
+
+#Intuition:
+This problem's aim is to find the depth of the tree, or in other words the height of the tree
+it is essential to know this pattern because it is widely used in other problems too.
+
+# Approach -->
+We set a function dfs which gets TreeNode and counter(current height of the element) as arguments
+We then iterate through the nodes to get the maximum height comparing it with global variable res
+
+#Complexities:
+# Time --> O(n) --> it is visiting each node
+# Space --> O(h) --> h is the stack size allocated for recursive calls

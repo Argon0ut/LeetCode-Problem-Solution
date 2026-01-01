@@ -1,0 +1,17 @@
+199. Binary Tree Right Side View
+Medium
+
+Intuition:
+This problem is very similar to 102. Binary Tree Level Order Traversal.
+In this problem we have to find the right most element in each level, while in 102, we had to find each element in at each level.
+
+Approach:
+We have to simply store all the elements at current level into Hash Table with
+level: List(int)
+
+At the end put all the last elements of each level into array.
+
+Complexities:
+Time --> O(n) --> we visit each node of the tree
+Space --> O(n) --> we allocate space for 1 node at each level
+

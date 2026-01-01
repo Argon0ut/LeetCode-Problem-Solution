@@ -1,0 +1,34 @@
+1448. Count Good Nodes in Binary Tree
+[Medium]
+Tree, DFS, Binary Tree
+Pattern: Pre-Order Traversal , dynamic array to track elements
+Related: {
+    102. Binary Tree Level Order Traversal
+    235. Lowest Common Ancestor of a Binary Search Tree
+}
+
+
+
+#Intuition:
+In order to identify weather or not the node is considered good or not, we have to know values of the elements that came
+before it. Current node is not good if it is less than the maximum value in our array.
+
+#Approach:
+Use pre-order traversal using dfs.
+1) res = 0 --> counter of good nodes
+2) dfs(current element, array)
+    1) stop condition --> return back if the current node is None
+    2) check if the current node value is good or not:
+        if the array is empty --> good
+        val >= max(arr) --> good
+        val < max(arr) --> not good
+    3) append the current element to the array
+    4) check left child
+    5) check right child
+
+Generally, pretty easy question.
+
+#Complexities:
+Time --> O(n) --> visites
+Space --> O(n) --> adding each element to the array (can be optimized if we do no use array but simply track the max values at each step)
+

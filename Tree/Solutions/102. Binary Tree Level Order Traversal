@@ -1,0 +1,29 @@
+102. Binary Tree Level Order Traversal
+[Medium]
+
+This is a very interesting problem that can be solved both via DFS and BFS
+
+My approach focuses on the DFS approach
+
+Intuition:
+1) the output is fully based on the height of the Binary Tree. That is why we can use/change the algorithm used for
+finding the height of the binary tree
+
+Application:
+1) We need a HashTable that will store all the elements by level, and the key:value pair will look as follows:
+    Level(int) : elements(List[int])
+
+2) Use DFS to Visit each node
+The traversal is proceeded via pre-order traversal(PLR).
+We first create a K:V pair in HashTable or add to existing one, then do the same for children
+
+The HashTable in python is not ordered in its nature. But in our case, the levels are already added in sorted order,
+so no need to worry about the ordering.
+
+At the end, simply initialize the final array and add all elements of the HashTable via generator
+
+
+Complexity:
+Time --> O(n) --> running through all elements of the tree
+Space --> O(n) --> store all elements into hashtable
+

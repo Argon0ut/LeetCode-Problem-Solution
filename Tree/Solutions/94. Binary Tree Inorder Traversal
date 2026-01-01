@@ -1,0 +1,16 @@
+94. Binary Tree Inorder Traversal
+Easy
+Pattern: Inorder Traversal
+Related: {
+    98. Validate Binary Search Tree
+    230. Kth Smallest Element in BST
+}
+
+
+Intuition: Inorder traversal preserves the following order: Left-Parent-Right
+
+Approach: use dfs and simple visit left subtree first
+
+Complexities:
+Time: O(n)
+Space: O(n)

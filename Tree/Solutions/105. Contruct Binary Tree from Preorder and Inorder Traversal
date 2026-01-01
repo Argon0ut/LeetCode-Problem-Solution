@@ -1,0 +1,40 @@
+105. Construct Binary Tree from Preorder and Inorder Traversal
+[Medium]
+DFS, Binary Tree, Tree
+Pattern: Tree Construction with Traversal orders
+Related:
+{
+    106. Construct Binary Tree from Inorder and PostOrder Traversal
+}
+
+
+!!! Important:
+Whenever you are given  a traversal order problems, INORDER traversal is mandatory
+The first element of PREORDER traversal is the ROOT
+Each element in these arrays are unique/distinct
+
+
+#Intuition
+In preorder traversal, we always start from the root.
+In other words, the first element in the array constructed by the pre-order traversal, the first element is always the root.
+Then we decide which nodes go to right or left subtree using the slicing on the inorder array
+
+#Approach
+We use recursive DFS.
+1) break condition for recursion -> if preorder or inorder arrays are empty --> return None (meeting the leaf)
+2) setting the current element's value as the first element of the preorder array\
+3) find the index of that element in the inorder array
+4) set the left subtree
+    --> pass the preorder array as preorder[1 : mid + 1] and inorder array as inorder[: mid]
+        here we do not include the current element into the preorder array and inorder array
+5) set the right subtree
+    --> pass the preorder array as preorder[mid + 1:] and inorder array as inorder[mid + 1:]
+        here we pass the rest of the preorder and inorder.
+in 4 and 5, we skip the inorder[mid] from including, because it is already used, and same for preorder[0]
+Important --> the length of the preorder and inorder lists are equal
+
+
+#Complexities:
+Time: O(n) --> visiting each node
+Space: O(n) --> creating nodes for each element
+n = number of nodes

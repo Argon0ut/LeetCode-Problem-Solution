@@ -1,0 +1,22 @@
+98. Validate Binary Search Tree
+Medium
+Pattern: Inorder Traversal
+Related: {
+    94. Binary Tree Inorder Traversal
+    230. Kth Smallest Element in BST
+}
+
+
+Intuition:
+Each tree can be represented as an array.
+In the case of BST, the array of elements must be in sorted order to be valid.
+
+Approach:
+Use DFS to look for every element in the tree by using "Inorder Traversal(L-P-R)"
+1) initialize an array that will store all elements
+2) traverse using DFS
+3) check if the elements in the array are located in increasing order
+
+Complexities:
+Time: O(n) --> once traverse through the whole tree and once through array
+Space: O(n) --> allocate space in the array for n values

@@ -1,0 +1,21 @@
+100. Same Tree
+[Easy]
+Tree, Binary Tree, DFS
+Related:
+Pattern: Iterating two trees at the same time
+
+# AIM:
+the aim here is to practice the iteration of two trees at the same time
+
+# Intuition:
+Simply iterate through each node in both trees at the same time
+
+# Approach:
+Use dfs to traverse both trees
+There are several edge cases to handle: one subtree is None, both are None, both present.
+
+# Complexity:
+    # Time Complexity:
+        O(n)
+    # Space Complexity:
+        O(n)

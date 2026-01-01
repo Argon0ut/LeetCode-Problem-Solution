@@ -1,0 +1,24 @@
+110. Balanced Binary Tree
+[Easy]
+Tree, Binary Tree, DFS
+Pattern: DFS with Subtrees' Height comparisons
+Related: 543. Diameter of Binary Tree
+
+# Definition:
+A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
+
+# Intuition::
+We simply have to find the height of the subtree and compare it to the height of the opposite subtree.
+If their absolute difference is more than 1, the tree is not balances.
+
+#Approach:
+Open a global variable to return --> res = True
+Write dfs that returns the height of max height of the subtree.
+Check condition for validation is abs(left - right) <= 1
+The traversal does not stop when one of subtrees is null, which means that it can go through entire skewed tree.
+
+Complexity:
+Time O(N)
+Space O(H):
+Worst Case: O(N) --> Skewed Tree
+Best Case: O(logN) --> Balanced Tree
