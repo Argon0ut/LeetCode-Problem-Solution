@@ -1,0 +1,23 @@
+DP --> way of making your algorithm efficient by storing some of the intermediate results. It works really well when your
+algorithm has a lot of repetitive computations so that you do not have to compute them over and over again.
+
+----------
+Steps for solving DP:
+1) Visualize Examples
+    Directed acyclic graph
+2) Find an appropriate subproblem
+3) Find relationships among subproblems
+4) Generalize the relationships
+5) Implement by solving subproblems in order
+
+-----------
+For solving DP, there are typically 3 steps you can take:
+1) Recursion --> if it contains lots of repetitive computations
+|
+2) Store (Memoization)
+3) Bottom-UP
+
+
+
+#DP is like a non-regular languages, because you have to work with previous answers to get the current answer.
+

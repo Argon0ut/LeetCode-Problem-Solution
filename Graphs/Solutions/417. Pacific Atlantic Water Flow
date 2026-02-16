@@ -1,0 +1,18 @@
+417. Pacific Atlantic Water Flow
+[Medium]
+Topics: Graph, Array, Matrix, DFS, BFS
+Related : {no related questions yet}
+
+# Intuition:
+Since water should flow to both sides of the island, we have to find the local maximums.
+This means that we will traverse from the corners to the center of the grid
+
+# Approach:
+1) DFS
+
+
+2) BFS
+
+
+
+# Complexity:
