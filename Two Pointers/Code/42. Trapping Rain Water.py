@@ -30,7 +30,7 @@ class Solution:
                 else:
                     water += rMx - height[right]
                 right -= 1
-        return water
+        return water    
 
 
 

@@ -18,6 +18,10 @@ You must write a solution in O(log(m * n)) time complexity.
 # n --> size of the matrix
 # m --> size of the arrays in the matrix
 
+
+# the target should always be compared to the mid element in both binary searches
+
+
 from typing import List
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
@@ -28,9 +32,9 @@ class Solution:
         right = n - 1
         while left <= right:
             mid = (left + right) // 2
-            if matrix[right][0] > target:
+            if matrix[mid][0] > target:
                 right = mid - 1
-            elif matrix[left][-1] < target:
+            elif matrix[mid][-1] < target:
                 left = mid + 1
             else:
                 l = 0
@@ -43,4 +47,6 @@ class Solution:
                         l = m + 1
                     else:
                         return True
+                return False
+
         return False

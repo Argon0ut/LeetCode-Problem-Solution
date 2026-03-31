@@ -1,0 +1,10 @@
+356. Line Reflection
+Medium
+
+Approach: find the midpoint --> mid = (start + end) / 2 --> find the corresponding points on the other side of the line
+
+cases for reflection:
+y = (maxX + minX) / 2
+1) point > y --> point - 2* distance from p to mid
+2) point = y
+3) point < y --> point + 2* distance from p to mid
